@@ -1,0 +1,22 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}} !!!
+  </h1>
+</div>
+<ul>
+  <li *ngFor="let component of components">
+    <mat-checkbox [(ngModel)]="component.status" (change)="showElement(component.elementId)">
+      {{component.name}}
+    </mat-checkbox>
+  </li>
+</ul>
+<br/>
+<br/>
+
+
+<ul>
+  <li *ngFor="let element of elements | filterBy:{status:true}">
+    <input type="{{element.type}}" name="{{element.model}}" [(ngModel)]="element.model">
+  </li>
+</ul>
+

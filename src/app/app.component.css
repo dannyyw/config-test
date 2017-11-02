@@ -1,0 +1,11 @@
+ul li{
+  float: left;
+  list-style: none;
+  margin-right: 20px;
+}
+ul li /deep/ .mat-checkbox-input{opacity: 0}
+
+/deep/ .mat-checkbox-checked /deep/ .mat-checkbox-background{
+    background: #000;
+  }
+
